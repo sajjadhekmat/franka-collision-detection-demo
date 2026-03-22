@@ -1,2 +1,7 @@
-# franka-collision-detection-demo
-This demo showcases experimental work on collision detection for robotic manipulation on a Franka Emika research platform. To protect future publication plans, this repository contains only the video demo and a brief description, without source code.
+# Franka Collision Detection Demo
+
+Live page: https://sajjadhekmat.github.io/franka-collision-detection-demo/
+
+This repository contains a short demo page and video of my work on collision detection with a Franka Emika research robot.
+
+Source code is intentionally not included because the work is planned for future publication.
