@@ -11,25 +11,44 @@
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
+      color: #222;
     }
+
     h1 {
       margin-bottom: 0.2em;
     }
+
     .subtitle {
       color: #555;
       margin-bottom: 1.2em;
     }
-    video {
+
+    .video-container {
+      position: relative;
       width: 100%;
       max-width: 900px;
-      border-radius: 8px;
+      aspect-ratio: 16 / 9;
       margin: 20px 0;
+      overflow: hidden;
+      border-radius: 10px;
     }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
     .note {
       background: #f5f5f5;
       padding: 12px 16px;
       border-radius: 8px;
       margin-top: 20px;
+    }
+
+    a {
+      color: inherit;
     }
   </style>
 </head>
@@ -37,10 +56,14 @@
   <h1>Collision Detection Demo on a Franka Emika Research Robot</h1>
   <p class="subtitle">Research demo by Sajjad Hekmat</p>
 
-  <video autoplay muted playsinline controls loop>
-    <source src="demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/ItJF14O4dwE"
+      title="Collision Detection Demo on a Franka Emika Research Robot"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 
   <p>
     This page presents a video demonstration of my work on collision detection
@@ -49,9 +72,19 @@
     relevant to safe and responsive robot operation.
   </p>
 
+  <p>
+    This project is aligned with my broader research interests in robot
+    manipulation, learning-based robotics, and human-robot interaction.
+  </p>
+
   <div class="note">
     Source code is intentionally not shared at this stage because the work is
     planned for future publication.
   </div>
+
+  <p>
+    You can also watch the video directly on
+    <a href="https://www.youtube.com/watch?v=ItJF14O4dwE" target="_blank" rel="noopener noreferrer">YouTube</a>.
+  </p>
 </body>
 </html>
