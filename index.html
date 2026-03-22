@@ -3,88 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collision Detection Demo on a Franka Emika Research Robot</title>
+  <title>Collision Detection Demo | Sajjad Hekmat</title>
   <style>
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg-soft: #f8fafc;
+      --accent: #111827;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 950px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+
+    .hero {
+      margin-bottom: 28px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.86rem;
+      color: var(--muted);
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 12px;
+      margin-bottom: 18px;
     }
 
     h1 {
-      margin-bottom: 0.2em;
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--accent);
     }
 
     .subtitle {
-      color: #555;
-      margin-bottom: 1.2em;
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      color: var(--muted);
     }
 
-    .video-container {
+    .affiliation {
+      margin: 0;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin: 28px 0;
+    }
+
+    .video-wrap {
       position: relative;
       width: 100%;
-      max-width: 900px;
       aspect-ratio: 16 / 9;
-      margin: 20px 0;
-      overflow: hidden;
-      border-radius: 10px;
+      background: #000;
     }
 
-    .video-container iframe {
+    .video-wrap iframe {
       width: 100%;
       height: 100%;
       border: 0;
       display: block;
     }
 
+    .content {
+      padding: 26px 24px 28px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
     .note {
-      background: #f5f5f5;
-      padding: 12px 16px;
-      border-radius: 8px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      color: var(--text);
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
       margin-top: 20px;
+    }
+
+    .meta-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.98rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 0.96rem;
+      color: var(--muted);
     }
 
     a {
       color: inherit;
     }
+
+    .link {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding-top: 32px;
+      }
+
+      .content {
+        padding: 20px 18px 22px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Collision Detection Demo on a Franka Emika Research Robot</h1>
-  <p class="subtitle">Research demo by Sajjad Hekmat</p>
+  <main class="container">
+    <section class="hero">
+      <div class="tag">Research Demo</div>
+      <h1>Collision Detection Demo on a Franka Emika Research Robot</h1>
+      <p class="subtitle">Sajjad Hekmat</p>
+      <p class="affiliation">
+        University of Lisbon, Lisbon, Portugal / Technical University of Darmstadt, Darmstadt, Germany
+      </p>
+      <p class="affiliation">
+        UNITE! double-degree PhD student
+      </p>
+    </section>
 
-  <div class="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/ItJF14O4dwE"
-      title="Collision Detection Demo on a Franka Emika Research Robot"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
+    <section class="card">
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/ItJF14O4dwE"
+          title="Collision Detection Demo on a Franka Emika Research Robot"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-  <p>
-    This page presents a video demonstration of my work on collision detection
-    in robotic manipulation using a Franka Emika research robot. The demo
-    illustrates experimental behavior in contact-rich interaction scenarios
-    relevant to safe and responsive robot operation.
-  </p>
+      <div class="content">
+        <h2>Overview</h2>
+        <p>
+          This page presents a video demonstration of my work on collision detection
+          in robotic manipulation using a Franka Emika research robot. The demo
+          highlights experimental behavior in contact-rich interaction scenarios
+          relevant to safe and responsive robot operation.
+        </p>
 
-  <p>
-    This project is aligned with my broader research interests in robot
-    manipulation, learning-based robotics, and human-robot interaction.
-  </p>
+        <p>
+          The work is aligned with my broader research interests in robot manipulation,
+          learning-based robotics, and human-robot interaction. It reflects hands-on
+          experimentation with robotic systems in settings where robust contact awareness
+          and safe physical interaction are important.
+        </p>
 
-  <div class="note">
-    Source code is intentionally not shared at this stage because the work is
-    planned for future publication.
-  </div>
+        <div class="note">
+          <strong>Note:</strong> This repository is intended to share a research demo for
+          academic and professional presentation purposes. Source code is intentionally
+          not included because the work is being reserved for future publication.
+        </div>
 
-  <p>
-    You can also watch the video directly on
-    <a href="https://www.youtube.com/watch?v=ItJF14O4dwE" target="_blank" rel="noopener noreferrer">YouTube</a>.
-  </p>
+        <div class="meta">
+          <div class="meta-box">
+            <div class="meta-label">Platform</div>
+            <div class="meta-value">Franka Emika Research Robot</div>
+          </div>
+          <div class="meta-box">
+            <div class="meta-label">Research Areas</div>
+            <div class="meta-value">Robot Manipulation, HRI, Learning-based Robotics</div>
+          </div>
+          <div class="meta-box">
+            <div class="meta-label">Video Link</div>
+            <div class="meta-value">
+              <a class="link" href="https://www.youtube.com/watch?v=ItJF14O4dwE" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer">
+          For academic background and related work, please refer to my CV and research profile.
+        </p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
